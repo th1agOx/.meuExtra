@@ -1,22 +1,25 @@
+/*  seletor universal (sempre usar ele antes que qualquer aplicação css)
+    deixou as configurações de posicionamento do desktop zerado     */
+* {
+    margin: 0;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
 
-    width: 1024px;
-    text-align: center;
-    margin: auto  ;
+    text-align: center;   
 }
-
-#main {
+.main {
     width: 626px;
     text-align: center;
-    margin: 64px auto 67px ;
+    margin: 64px auto 0 auto ;
 }
 
-#main img {
+.main img {
     margin-bottom: 31px;
 }
 
-#main h1 {
+.main h1 {
     margin-bottom: 15.9px;
 }
 
@@ -44,16 +47,11 @@ p span {
     color: #828282;
 }
 
-#line {
+.line {
     border: 1px solid #ECEFF2;
     width: 391px;
 
-
-    margin: auto 315px 16px 315px;
-}
-
-#wave {
-    margin-top: 50px;
+    margin: 64px auto 16px auto;
 }
 
 a {
@@ -62,8 +60,25 @@ a {
     text-decoration: none;
 }
 
-/**
-a + a + a {
+a + a  {       /* leitura de trás para frente */
     margin-left: 40px;
 }
-**/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#wave{
+    width: 100vw;   /* largura com 100vw ocupará todo o desktop, em qualquer dispositivo */
+}
+
+
+
+/*
+    defou = o padrão da aplicação
+    Usar id somente para requisições expecificas ( unitarias )
+    fora isso, usar class
+*/
